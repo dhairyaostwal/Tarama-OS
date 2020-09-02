@@ -74,6 +74,19 @@ E1E6E1
     background: -webkit-linear-gradient(to bottom, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 #footer-section{
     background-color: #92fdc2;
+}
+
+.getStarted{
+    background-color: black;
+    color: white;
+    border:1px solid black;
+}
+
+.getStarted:hover{
+    background-color: black;
+    color: white;
+    border:1px solid black;
 }
