@@ -8,7 +8,7 @@
 - [ ] Fix errors as discussed updating the values of an **`insideTarama`** array
 - [ ] Need to convert all to **`.py`** file
 
-- [ ] Website Home page
+- [x] Website Home page
 - [ ] Dashboard
 - [ ] AJAX Linking
 - [ ] Flask API 
