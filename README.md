@@ -9,7 +9,7 @@
 - [ ] Need to convert all to **`.py`** file
 
 - [x] Website Home page
-- [ ] Make 'But Now' link work
-- [ ] Dashboard
+- [x] Make 'But Now' link work
+- [ ] Dashboard for Website
 - [ ] AJAX Linking
 - [ ] Flask API 
