@@ -90,3 +90,37 @@ E1E6E1
     color: white;
     border:1px solid black;
 }
+
+.dashboardBanner{
+    background-color: #d85f5f;
+    color: black;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 3.2rem;
+    padding: .8rem;
+}
+
+.dashboardBG{
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.dashboardCard{
+    background-color: white;
+    padding: 2rem;
+}
+
+.inputCustom{
+    margin-bottom: .5rem;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+}
+
+.capacityCount{
+    font-family: 'Poppins';
+    font-size: 2rem;
+}
