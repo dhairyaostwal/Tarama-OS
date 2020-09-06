@@ -10,5 +10,5 @@
 - [x] Dashboard for Website
 - [ ] AJAX Linking
 - [ ] Flask API 
-- [ ] Fix errors as discussed updating the values of an **`insideTarama`** array
+- [x] Fix errors as discussed updating the values of an **`insideTarama`** array
 - [ ] Need to convert all to **`.py`** file
