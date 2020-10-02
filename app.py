@@ -89,10 +89,10 @@ def display():
 
     capacity = 30
     replacedpos = []
-    l = []
+    # l = []
     l1 = []
     sumele = []
-    waiting = []
+    waiting = [0, 0, 0, 0, 0]
 
 
     def schedulecheck():
@@ -149,12 +149,9 @@ def display():
 
 
             for i in range(0, len(l1[-1])):
-                waiting.insert(inqueue1.index(l1[-1][i]), waitingtime)
+                waiting[inqueue1.index(l1[-1][i])] = waitingtime
                 inqueue.pop(inqueue.index(l1[-1][i]))
 
-            # result.append({
-            #     'waiting': waiting
-            # })
 
             bubble(insideTarama, currentstatus)
             
