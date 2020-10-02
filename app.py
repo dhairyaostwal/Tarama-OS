@@ -89,7 +89,6 @@ def display():
 
     capacity = 30
     replacedpos = []
-    # l = []
     l1 = []
     sumele = []
     waiting = [0, 0, 0, 0, 0]
