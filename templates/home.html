@@ -11,7 +11,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" type="text/css">
 
     <title>Welcome to Tarama! Most Favourite Restaurant in Vellore</title>
 </head>
@@ -48,10 +48,10 @@
 
                     <div class="VITOffer">Exciting offers for VIT people!</div>
 
-                    <div><a href="TaramaVacant.html" class="btn btn-primary btn-lg getStarted">Get Started</a></div>
+                    <div><a href="/fillinsidetarama" class="btn btn-primary btn-lg getStarted">Get Started</a></div>
                 </div>
                 <div class="col-sm-6">
-                    <img src="./img/home.png" alt="friends eating pizza" srcset="" height="400px" width="600px">
+                    <img src="/static/img/home.png" alt="friends eating pizza" srcset="" height="400px" width="600px">
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                     </p>
                 </div>
                 <div class="col-sm-6">
-                    <img src="./img/insideTarama.png" alt="" srcset="" height="350px" width="600px">
+                    <img src="/static/img/insideTarama.png" alt="" srcset="" height="350px" width="600px">
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
                         </span></p>
                 </div>
                 <div class="col-sm-6">
-                    <img src="./img/insideTarama.png" alt="" srcset="" height="350px" width="600px">
+                    <img src="/static/img/insideTarama.png" alt="" srcset="" height="350px" width="600px">
                 </div>
             </div>
         </div>
