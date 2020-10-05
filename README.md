@@ -1,11 +1,11 @@
-<h1 align="center">TaramaOS<br><h3 align="center"><i>Some subtitle...</i></h3><br>
+<h1 align="center">Tarama-OS<br><h3 align="center"><i>Some subtitle...</i></h3><br>
 <h1 align="center"><img src="https://miro.medium.com/max/1400/1*KueXVwBtQpLwj0q6-SO9HA.png" height="500px" width="500px"><br>
   </h1>
   
 
-[![S&D-Product-Idea](https://img.shields.io/badge/Link-Product--idea-blue?&style=for-the-badge)](https://github.com/dhairyaostwal/TaramaOS/blob/master/README.md#product-idea-in-nutshell)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightyellow?&style=for-the-badge)](https://github.com/dhairyaostwal/TaramaOS/pulls)
-[![Star Repo](https://img.shields.io/badge/Star--Repo-Thanks-ffc30b?&style=for-the-badge)](https://github.com/dhairyaostwal/TaramaOS/stargazers)
+[![S&D-Product-Idea](https://img.shields.io/badge/Link-Product--idea-blue?&style=for-the-badge)](https://github.com/dhairyaostwal/Tarama-OS/blob/master/README.md#product-idea-in-nutshell)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightyellow?&style=for-the-badge)](https://github.com/dhairyaostwal/Tarama-OS/pulls)
+[![Star Repo](https://img.shields.io/badge/Star--Repo-Thanks-ffc30b?&style=for-the-badge)](https://github.com/dhairyaostwal/Tarama-OS/stargazers)
 [![Built-with-love](https://img.shields.io/badge/built--with-&hearts;-e11584?&style=for-the-badge)](https://github.com/dhairyaostwal/Tarama-OS#before-you-leave-)
 
 ## Product Idea in Nutshell
