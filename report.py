@@ -25,14 +25,24 @@ documentTitle = 'Waiting Time Report'
 title = 'TaramaOS'
 subtitle = 'We are sorry to keep you waiting :('
 
-textlines=[]
-
+textlines=['Group 0     =      ','Group 1     =      ','Group 2     =      ','Group 3     =      ','Group 4     =      ']
 
 pdf = canvas.Canvas(fileName)
 pdf.setTitle(documentTitle)
 
 pdf.drawString(270,770,title)
 pdf.drawString(210,750,subtitle)
+pdf.drawString(200,690,textlines[0])
+pdf.drawString(300,690,'SomeConstant')
+pdf.drawString(200,665,textlines[1])
+pdf.drawString(300,665,'SomeConstant')
+pdf.drawString(200,640,textlines[2])
+pdf.drawString(300,640,'SomeConstant')
+pdf.drawString(200,615,textlines[3])
+pdf.drawString(300,615,'SomeConstant')
+pdf.drawString(200,590,textlines[4])
+pdf.drawString(300,590,'SomeConstant')
+
 drawMyRuler(pdf)
 
 pdf.save()
