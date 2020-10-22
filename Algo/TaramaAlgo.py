@@ -25,9 +25,8 @@ def bubble(arr, b):
                 arr[j], arr[j+1] = arr[j+1], arr[j] 
                 b[j], b[j+1] = b[j+1], b[j] 
 
-
-insideTarama = [8, 7, 5, 5, 5]
-inqueue = [4, 5, 6, 7, 8]
+insideTarama = [10, 10, 8, 1, 1]
+inqueue = [10, 4, 9, 3, 2, 2]
 inqueue1 = []
 for i in inqueue:
     inqueue1.append(i)
@@ -38,13 +37,16 @@ l1 = []
 insert = []
 currentstatus = []
 sumele = []
-waiting = [0, 0, 0, 0, 0]
+waiting = []
+for i in range(len(inqueue)):
+    waiting.append(0)
 
 
 def schedulecheck():
 
     waitingtime = 0
     insideTarama.sort()
+    bubble(inqueue, waiting)
     for i in range(0, len(insideTarama)):
         currentstatus.insert(i, insideTarama[i])
     
@@ -99,13 +101,16 @@ def schedulecheck():
             insideTarama.pop(unique(replacedpos)[i] - i)
             currentstatus.pop(unique(replacedpos)[i] - i)
 
-        replacedpos.clear()
+        
 
+        print(l1[-1])
 
-        for i in range(0, len(l1[-1])):
+        for i in range(len(l1[-1])):
+            print(inqueue1)
             waiting[inqueue1.index(l1[-1][i])] = waitingtime
             print("&&&&", inqueue1.index(l1[-1][i]))
             inqueue.pop(inqueue.index(l1[-1][i]))
+            inqueue1[inqueue1.index(l1[-1][i])] = 0
         print("waiting", waiting)
 
         print("New Vacancy: ", Vacancy)
@@ -116,7 +121,7 @@ def schedulecheck():
 
         
 
-
+        replacedpos.clear()
         l1.clear()
         sumele.clear()
     # while 0 in waiting: waiting.remove(0)

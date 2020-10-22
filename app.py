@@ -9,6 +9,7 @@ inqueue = []
 currentstatus = []
 insideTarama1 = []
 inqueue1 = []
+inqueue2 = []
 currentstatus1 = []
 t = []
 q = []
@@ -40,6 +41,7 @@ def fill():
         q.append(request.form.get("two"))
         q.append(request.form.get("three"))
         q.append(request.form.get("four"))
+        q.append(request.form.get("five"))
         return redirect('/answers')
     return render_template('TaramaWaiting.html')
 
@@ -54,6 +56,8 @@ def display():
 
     for i in range(0, len(q)):
         inqueue1.insert(i, int(q[i]))
+    for i in range(0, len(q)):
+        inqueue2.insert(i, int(q[i]))
     for i in range(0, len(t)):
         insideTarama1.insert(i, int(t[i]))
     for i in range(0, len(t)):
@@ -62,7 +66,7 @@ def display():
 
     result = []
     result.append(insideTarama1)
-    result.append(inqueue1)
+    result.append(inqueue2)
     def unique(list1): 
         list_set = set(list1) 
         unique_list = (list(list_set)) 
@@ -91,13 +95,16 @@ def display():
     replacedpos = []
     l1 = []
     sumele = []
-    waiting = [0, 0, 0, 0, 0]
+    waiting = []
+    for i in inqueue1:
+        waiting.append(i)
 
 
     def schedulecheck():
 
         waitingtime = 0
         bubble(insideTarama, currentstatus)
+        bubble(inqueue, waiting)
 
         
 
@@ -150,7 +157,7 @@ def display():
             for i in range(0, len(l1[-1])):
                 waiting[inqueue1.index(l1[-1][i])] = waitingtime
                 inqueue.pop(inqueue.index(l1[-1][i]))
-
+                inqueue1[inqueue1.index(l1[-1][i])] = 0
 
             bubble(insideTarama, currentstatus)
             
@@ -163,11 +170,8 @@ def display():
 
 
     schedulecheck()
-    result.append(waiting[0])
-    result.append(waiting[1])
-    result.append(waiting[2])
-    result.append(waiting[3])
-    result.append(waiting[4])
+    for i in waiting:
+        result.append(i)
 
 
     return render_template('Report.html', result=result)
