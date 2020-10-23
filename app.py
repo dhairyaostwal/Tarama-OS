@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify, redirect
 from itertools import combinations
+from reportlab.pdfgen import canvas
 
 app = Flask(__name__)
 
@@ -13,6 +14,8 @@ inqueue2 = []
 currentstatus1 = []
 t = []
 q = []
+result = []
+
 
 @app.route('/')
 def index():
@@ -64,7 +67,6 @@ def display():
         currentstatus1.insert(i, insideTarama[i])
     
 
-    result = []
     result.append(insideTarama1)
     result.append(inqueue2)
     def unique(list1): 
@@ -170,12 +172,74 @@ def display():
 
 
     schedulecheck()
+
     for i in waiting:
         result.append(i)
 
+    result.append(max(waiting))
+    result.append(max(waiting) / len(inqueue1))
 
     return render_template('Report.html', result=result)
+@app.route('/report')
+def generatepdf():
+    def drawMyRuler(pdf):
+        pdf.drawString(100,810, 'x100')
+        pdf.drawString(200,810, 'x200')
+        pdf.drawString(300,810, 'x300')
+        pdf.drawString(400,810, 'x400')
+        pdf.drawString(500,810, 'x500')
+        pdf.drawString(600,810, 'x600')
 
+        pdf.drawString(10,100, 'y100')
+        pdf.drawString(10,200, 'y200')
+        pdf.drawString(10,300, 'y300')
+        pdf.drawString(10,400, 'y400')
+        pdf.drawString(10,500, 'y500')
+        pdf.drawString(10,600, 'y600')
+        pdf.drawString(10,700, 'y700')
+        pdf.drawString(10,800, 'y800')
+    fileName = 'report.pdf'
+    documentTitle = 'Waiting Time Report'
+    title = 'TaramaOS'
+    subtitle = 'We are sorry to keep you waiting :('
+
+    textlines=['Group 0     =      ','Group 1     =      ','Group 2     =      ','Group 3     =      ','Group 4     =      ']
+
+    pdf = canvas.Canvas(fileName)
+    pdf.setTitle(documentTitle)
+
+    pdf.drawString(270,770,title)
+    pdf.drawString(210,750,subtitle)
+
+
+    pdf.drawString(200,690,textlines[0])
+    pdf.drawString(300,690,str(result[2]))
+
+    pdf.drawString(200,665,textlines[1])
+    pdf.drawString(300,665,str(result[3]))
+
+    pdf.drawString(200,640,textlines[2])
+    pdf.drawString(300,640,str(result[4]))
+
+    pdf.drawString(200,615,textlines[3])
+    pdf.drawString(300,615,str(result[5]))
+
+    pdf.drawString(200,590,textlines[4])
+    pdf.drawString(300,590,str(result[6]))
+
+    pdf.drawString(200,565,textlines[4])
+    pdf.drawString(300,565,str(result[7]))
+
+    pdf.drawString(200,540,'Total Waiting Time = ')
+    pdf.drawString(320,540,str(result[8]))
+
+    pdf.drawString(200,515,'Average Waiting Time = ')
+    pdf.drawString(330,515,str(result[9]))
+
+    drawMyRuler(pdf)
+
+    pdf.save()
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)

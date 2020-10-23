@@ -1,8 +1,8 @@
 # Refering this https://www.youtube.com/watch?v=ZDR7-iSuwkQ
 # https://www.youtube.com/watch?v=P6sdJsSOIG8
 
-import app
-
+from app import result, display
+print(result)
 def drawMyRuler(pdf):
     pdf.drawString(100,810, 'x100')
     pdf.drawString(200,810, 'x200')
@@ -34,16 +34,22 @@ pdf.setTitle(documentTitle)
 
 pdf.drawString(270,770,title)
 pdf.drawString(210,750,subtitle)
+
+
 pdf.drawString(200,690,textlines[0])
-pdf.drawString(300,690,'SomeConstant')
+pdf.drawString(300,690,result[3])
+
 pdf.drawString(200,665,textlines[1])
-pdf.drawString(300,665,'SomeConstant')
+pdf.drawString(300,665,result[3])
+
 pdf.drawString(200,640,textlines[2])
-pdf.drawString(300,640,'SomeConstant')
+pdf.drawString(300,640,result[4])
+
 pdf.drawString(200,615,textlines[3])
-pdf.drawString(300,615,'SomeConstant')
+pdf.drawString(300,615,result[5])
+
 pdf.drawString(200,590,textlines[4])
-pdf.drawString(300,590,'SomeConstant')
+pdf.drawString(300,590,result[6])
 
 drawMyRuler(pdf)
 
