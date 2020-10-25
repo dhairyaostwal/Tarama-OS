@@ -26,25 +26,19 @@ def hello():
     insideTarama.clear()
     currentstatus.clear()
     if(request.method == 'POST'):
-        t.append(request.form.get("zero"))
-        t.append(request.form.get("one"))
-        t.append(request.form.get("two"))
-        t.append(request.form.get("three"))
-        t.append(request.form.get("four"))
+        for i in range(100):
+            if(request.form.get(str(i))):
+                t.append(request.form.get(str(i)))
         return redirect('/fillinqueue')
     return render_template('TaramaVacant.html')
 
 
 @app.route('/fillinqueue', methods = ['GET', 'POST'])
 def fill():
-    inqueue.clear()
     if(request.method == 'POST'):
-        q.append(request.form.get("zero"))
-        q.append(request.form.get("one"))
-        q.append(request.form.get("two"))
-        q.append(request.form.get("three"))
-        q.append(request.form.get("four"))
-        q.append(request.form.get("five"))
+        for i in range(100):
+            if(request.form.get(str(i))):
+                q.append(request.form.get(str(i)))
         return redirect('/answers')
     return render_template('TaramaWaiting.html')
 
@@ -67,8 +61,6 @@ def display():
         currentstatus1.insert(i, insideTarama[i])
     
 
-    result.append(insideTarama1)
-    result.append(inqueue2)
     def unique(list1): 
         list_set = set(list1) 
         unique_list = (list(list_set)) 
@@ -173,6 +165,9 @@ def display():
 
     schedulecheck()
 
+    result.append(str(insideTarama1))
+    result.append(str(inqueue2))
+
     for i in waiting:
         result.append(i)
 
@@ -203,38 +198,26 @@ def generatepdf():
     title = 'TaramaOS'
     subtitle = 'We are sorry to keep you waiting :('
 
-    textlines=['Group 0     =      ','Group 1     =      ','Group 2     =      ','Group 3     =      ','Group 4     =      ']
-
     pdf = canvas.Canvas(fileName)
     pdf.setTitle(documentTitle)
 
     pdf.drawString(270,770,title)
     pdf.drawString(210,750,subtitle)
 
+    x1 = 200
+    x2 = 300
+    y = 715
 
-    pdf.drawString(200,690,textlines[0])
-    pdf.drawString(300,690,str(result[2]))
+    for i in range(2, len(result) - 2):
+        pdf.drawString(x1 , y, 'Group ' + str(i - 2) + ' = ')
+        pdf.drawString(x2, y, str(result[i]))
+        y -= 25
 
-    pdf.drawString(200,665,textlines[1])
-    pdf.drawString(300,665,str(result[3]))
+    pdf.drawString(x1,540,'Total Waiting Time = ')
+    pdf.drawString(320,540,str(result[len(result) - 2]))
 
-    pdf.drawString(200,640,textlines[2])
-    pdf.drawString(300,640,str(result[4]))
-
-    pdf.drawString(200,615,textlines[3])
-    pdf.drawString(300,615,str(result[5]))
-
-    pdf.drawString(200,590,textlines[4])
-    pdf.drawString(300,590,str(result[6]))
-
-    pdf.drawString(200,565,textlines[4])
-    pdf.drawString(300,565,str(result[7]))
-
-    pdf.drawString(200,540,'Total Waiting Time = ')
-    pdf.drawString(320,540,str(result[8]))
-
-    pdf.drawString(200,515,'Average Waiting Time = ')
-    pdf.drawString(330,515,str(result[9]))
+    pdf.drawString(x1,515,'Average Waiting Time = ')
+    pdf.drawString(330,515,str(result[len(result) - 1]))
 
     drawMyRuler(pdf)
 

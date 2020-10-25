@@ -25,8 +25,8 @@ def bubble(arr, b):
                 arr[j], arr[j+1] = arr[j+1], arr[j] 
                 b[j], b[j+1] = b[j+1], b[j] 
 
-insideTarama = [10, 10, 8, 1, 1]
-inqueue = [10, 4, 9, 3, 2, 2]
+insideTarama = [10, 9, 9, 1, 1]
+inqueue = [10, 4, 9, 5, 2]
 inqueue1 = []
 for i in inqueue:
     inqueue1.append(i)

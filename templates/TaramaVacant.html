@@ -27,18 +27,25 @@
         <div class="container">
             <div class="dashboardCard">
                 <div class="card-body text-center ">
-                    <form action="", method="POST">
+                    <form action="", method="POST" id="enter">
                         <div class="mb-2"><span style="font-size: 1.7rem; font-family: 'Poppins';">Restaurant Status =</span> <span class="capacityCount">30</span></div>
-                        <div class="row inputCustom">
-                            <div class="col-sm-6 text-center">
-                                Arrival Time 0:
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="number" name="zero" id="">
+                        <div id="allinputs">
+                            <div class="row inputCustom">
+                                <div class="col-sm-6 text-center">
+                                    Arrival Time 0:
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="number" name=0 id="in">
+                                </div>
                             </div>
                         </div>
+                        <div>
+                            <button>
+                                +
+                            </button>
+                        </div>
 
-                        <div class="row inputCustom">
+                        <!-- <div class="row inputCustom">
                             <div class="col-sm-6 text-center">
                                 Arrival Time 1:
                             </div>
@@ -72,7 +79,7 @@
                             <div class="col-sm-6">
                                 <input type="number" name="four" id="">
                             </div>
-                        </div>
+                        </div> -->
 
                         <div style="text-align: center; margin-top: .8rem;">
                             <button class="btn btn-primary btn-lg getStarted">Submit</button>
@@ -117,6 +124,29 @@
             </div>
         </section>
     </footer>
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click', (e)=>{
+            e.preventDefault();
+            const mainclass = document.querySelector('#allinputs');
+            const noofinputs = document.querySelectorAll('.row').length - 1;
+            div1 = document.createElement('div');
+            div1.setAttribute("class", "row inputCustom");
+            insidediv11 = document.createElement('div')
+            insidediv11.setAttribute('class', 'col-sm-6 text-center');
+            insidediv11.textContent = 'Arrival Time ' + noofinputs + ' :';
+            insidediv12 = document.createElement('div');
+            insidediv12.setAttribute('class', 'col-sm-6');
+            input = document.createElement('input');
+            input.name = noofinputs;
+            input.id = 'in';
+            insidediv12.append(input);
+            div1.append(insidediv11, insidediv12);
+            mainclass.append(div1)
+        })  
+        
+
+    </script>
 
 </body>
 
