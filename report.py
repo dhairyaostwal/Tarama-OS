@@ -1,6 +1,3 @@
-# Refering this https://www.youtube.com/watch?v=ZDR7-iSuwkQ
-# https://www.youtube.com/watch?v=P6sdJsSOIG8
-
 from app import result, display
 print(result)
 def drawMyRuler(pdf):
