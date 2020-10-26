@@ -177,22 +177,22 @@ def display():
     return render_template('Report.html', result=result)
 @app.route('/report')
 def generatepdf():
-    def drawMyRuler(pdf):
-        pdf.drawString(100,810, 'x100')
-        pdf.drawString(200,810, 'x200')
-        pdf.drawString(300,810, 'x300')
-        pdf.drawString(400,810, 'x400')
-        pdf.drawString(500,810, 'x500')
-        pdf.drawString(600,810, 'x600')
+    # def drawMyRuler(pdf):
+    #     pdf.drawString(100,810, 'x100')
+    #     pdf.drawString(200,810, 'x200')
+    #     pdf.drawString(300,810, 'x300')
+    #     pdf.drawString(400,810, 'x400')
+    #     pdf.drawString(500,810, 'x500')
+    #     pdf.drawString(600,810, 'x600')
 
-        pdf.drawString(10,100, 'y100')
-        pdf.drawString(10,200, 'y200')
-        pdf.drawString(10,300, 'y300')
-        pdf.drawString(10,400, 'y400')
-        pdf.drawString(10,500, 'y500')
-        pdf.drawString(10,600, 'y600')
-        pdf.drawString(10,700, 'y700')
-        pdf.drawString(10,800, 'y800')
+    #     pdf.drawString(10,100, 'y100')
+    #     pdf.drawString(10,200, 'y200')
+    #     pdf.drawString(10,300, 'y300')
+    #     pdf.drawString(10,400, 'y400')
+    #     pdf.drawString(10,500, 'y500')
+    #     pdf.drawString(10,600, 'y600')
+    #     pdf.drawString(10,700, 'y700')
+    #     pdf.drawString(10,800, 'y800')
     fileName = 'report.pdf'
     documentTitle = 'Waiting Time Report'
     title = 'TaramaOS'
@@ -219,7 +219,7 @@ def generatepdf():
     pdf.drawString(x1,515,'Average Waiting Time = ')
     pdf.drawString(330,515,str(result[len(result) - 1]))
 
-    drawMyRuler(pdf)
+    # drawMyRuler(pdf)
 
     pdf.save()
     return redirect('/')
