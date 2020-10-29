@@ -1,4 +1,4 @@
-<h1 align="center">Tarama-OS<br><h3 align="center"><i>Some subtitle...</i></h3><br>
+<h1 align="center">Tarama-OS<br><h3 align="center"><i>Solving Restraurant Waiting Crisis</i></h3><br>
 <h1 align="center"><img src="https://miro.medium.com/max/1400/1*KueXVwBtQpLwj0q6-SO9HA.png" height="500px" width="500px"><br>
   </h1>
   
@@ -11,7 +11,12 @@
 ## Product Idea in Nutshell
 
 ```
-Will be updated...
+Aim of this project is to solve our favourite restraurant Tarama perform better. Unfortunately Tarama with very limited seatings gets super crowded during afternoons and on Sundays. What to do then?
+
+Well if you ask the restraurant owner the solution to this problem he would simply say First Come, First Serve! Well take group size in account and this fails!
+Also if you're thinking of SJF, SRTF, Priority or Round Robin all fail here!
+
+We devised a new algo(description to be added soon...) here to help solve this problem.
 ```
 
 
@@ -30,7 +35,11 @@ Will be updated...
 ## Run the Project
 
 ```
-Will be updated ...
+
+1. Clone Repo
+2. Run on terminal python3 app.py
+3. Enjoy 🎉
+
 ```
 
 
