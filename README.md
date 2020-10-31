@@ -43,10 +43,11 @@ We devised a new algo(description to be added soon...) here to help solve this p
 ```
 
 
-## Support Me
+## Supported by
 
-Share my Blog Post [link](https://codeburst.io/design-your-personal-covid-19-dashboard-fb0f741190e)
+[Anchit](https://github.com/Anchit402), CTO of the project 
 
+Heartiest thanks to you for bringing my dream come alive! Without you it wouldn't have been possible!
 
 ## Before you leave 🥺
 
