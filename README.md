@@ -51,7 +51,7 @@ Heartiest thanks to you for bringing my dream come alive! Without you it wouldn'
 
 ## Before you leave 🥺
 
-Hey! I am Dhairya Ostwal, a CSE undergrad from India. I mainly work on frontend web development and love building innovative products. 
+Hey! I am [Dhairya Ostwal](https://github.com/dhairyaostwal), a CSE undergrad from India. I mainly work on frontend web development and love building innovative products. 
 
 🌱 Previously served as a Business Development Intern in a legal-tech startup driving Pre-Sales & Expansion. So, you can also call me *a **Business Dev turned Developer*** 👨🏻‍💻
 
