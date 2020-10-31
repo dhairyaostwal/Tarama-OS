@@ -1,5 +1,5 @@
 <h1 align="center">Tarama-OS<br><h3 align="center"><i>Solving Restraurant Waiting Crisis</i></h3><br>
-<h1 align="center"><img src="https://miro.medium.com/max/1400/1*KueXVwBtQpLwj0q6-SO9HA.png" height="500px" width="500px"><br>
+<h1 align="center"><img src="Frame 6.png" height="500px" width="500px"><br>
   </h1>
   
 
