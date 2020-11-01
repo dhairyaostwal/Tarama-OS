@@ -10,14 +10,14 @@
 
 ## Product Idea in Nutshell
 
-```
+
 Aim of this project is to solve our favourite restraurant Tarama perform better. Unfortunately Tarama with very limited seatings gets super crowded during afternoons and on Sundays. What to do then?
 
 Well if you ask the restraurant owner the solution to this problem he would simply say First Come, First Serve! Well take group size in account and this fails!
 Also if you're thinking of SJF, SRTF, Priority or Round Robin all fail here!
 
 We devised a new algo(description to be added soon...) here to help solve this problem.
-```
+
 
 
 ## Tech Stack Used
