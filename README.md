@@ -42,13 +42,6 @@ We devised a new algo(description to be added soon...) here to help solve this p
 
 ```
 
-
-## Supported by
-
-[Anchit](https://github.com/Anchit402), CTO of the project 
-
-Heartiest thanks to you for bringing my dream come alive! Without you it wouldn't have been possible! I remember both of us spent hours and long discussion hours building the algorithm and even after getting the right so as to provide the most customer relevance! In the end all of these were so much worth it!
-
 ## Before you leave 🥺
 
 Hey! I am [Dhairya Ostwal](https://github.com/dhairyaostwal), a CSE undergrad from India. I mainly work on frontend web development and love building innovative products. 
